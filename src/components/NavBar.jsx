@@ -23,12 +23,12 @@ export default function NavBar() {
             </span>
             <span className="text-[var(--color-royal)]">Binene</span>
           </NavLink>
-          <p className="text-sm text-slate-500">IT support | SOC Analyst Junior | AWS Cloud practitioner</p>
+          <p className="hidden text-sm text-slate-500 sm:block">IT support | SOC Analyst Junior | AWS Cloud practitioner</p>
         </div>
 
         <button
           type="button"
-          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-[var(--color-royal)] hover:text-[var(--color-royal)] focus:outline-none focus:ring-2 focus:ring-[var(--color-royal)]/50 md:hidden"
+          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-[var(--color-royal)] hover:text-[var(--color-royal)] active:bg-[var(--color-royal)] active:text-white focus:outline-none focus:ring-2 focus:ring-[var(--color-royal)]/50 md:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
           aria-label="Toggle navigation menu"
@@ -68,7 +68,7 @@ export default function NavBar() {
                 key={link.to}
                 to={link.to}
                 onClick={() => setOpen(false)}
-                className="rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-[var(--color-royal)]"
+                className="rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-[var(--color-royal)] active:bg-slate-200"
               >
                 {link.label}
               </NavLink>
